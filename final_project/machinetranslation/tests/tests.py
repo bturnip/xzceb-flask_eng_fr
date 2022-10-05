@@ -17,6 +17,16 @@ class TestMyModule(unittest.TestCase):
     def test_frenchToEnglish_02(self):
         self.assertIsNone(frenchToEnglish(None))
 
+    # note that the rubric and the instructions do not line
+    # up on what test cases to write.  Adding two more 
+    # cases to satisfy the assertNotEqual from the rubric
+    def test_frenchToEnglish_NotEqual(self):
+        self.assertNotEqual(frenchToEnglish('Bojour'),'Hola')
+        
+    def test_englishToFrench_NotEqual(self):
+        self.assertNotEqual(englishToFrench('Goodbye'),'Adios')
+  
+
 if __name__ == '__main__':
     unittest.main()
 
